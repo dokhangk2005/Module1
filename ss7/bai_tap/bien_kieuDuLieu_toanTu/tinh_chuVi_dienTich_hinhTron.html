@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh Chu Vi Dien Tich</title>
+</head>
+<body>
+<p>Nhập bán kính hình tròn</p>
+<input id="r"><span>cm</span><br>
+<button onclick="perimeter()">Tính chu vi</button>
+<button onclick="acreage()">Tính diện tích</button>
+<h2 id="result"></h2>
+<script>
+    function perimeter() {
+        let r = parseFloat(document.getElementById("r").value);
+        let p = 2 * r * 3.14;
+        document.getElementById("result").innerText = "Chu vi: " + p + "cm";
+    }
+
+    function acreage() {
+        let r = parseFloat(document.getElementById("r").value);
+        let a = 3.14 * r * r;
+        document.getElementById("result").innerText = "Diện tích: " + a + "cm2";
+    }
+</script>
+</body>
+</html>

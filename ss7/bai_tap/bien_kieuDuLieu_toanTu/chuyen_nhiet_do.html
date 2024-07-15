@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen nhiet do</title>
+</head>
+<body>
+<p>Nhập độ C</p><br>
+<input type="number" id="doC">
+<button onclick="change()">Chuyển</button><br>
+<h2 id="doF"></h2>
+<script>
+    function change() {
+        let doC = parseFloat(document.getElementById("doC").value);
+        let doF = doC/5*9+32;
+        document.getElementById("doF").innerText = doC + " độ C bằng " + doF + " độ F" ;
+    }
+</script>
+</body>
+</html>

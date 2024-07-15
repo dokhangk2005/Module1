@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<span>Amount</span>
+<input id="num"><br>
+<span>From Currency</span>
+<select name="currency1" id="currency1">
+    <option value="VN">VietNam</option>
+    <option value="USD">USD</option>
+</select><br>
+<span>To Currency</span>
+<select name="currency2" id="currency2">
+    <option value="VN">VietNam</option>
+    <option value="USD">USD</option>
+</select><br>
+<button onclick="chuyenDoi()">Convert</button>
+<h2 id="result"></h2>
+<script>
+    function chuyenDoi() {
+        let cur1 = document.getElementById("currency1").value;
+        let cur2 = document.getElementById("currency2").value;
+        let soLuong = +document.getElementById("num").value;
+        let result;
+        console.log(cur1);
+        console.log(cur2);
+        console.log(soLuong);
+        if (cur1 === "VN") {
+            if (cur2 === "USD") {
+                result = soLuong * 0.0000424267688296908;
+            } else {
+                result = soLuong;
+            }
+        } else {
+            if (cur2 === "VN") {
+                result = soLuong / 0.0000424267688296908;
+            } else {
+                result = soLuong;
+            }
+        }
+        document.getElementById("result").innerText = "Result: " + result;
+    }
+</script>
+</body>
+</html>

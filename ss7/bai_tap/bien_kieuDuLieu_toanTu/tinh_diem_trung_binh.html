@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh diem trung binh</title>
+</head>
+<body>
+<p>Điểm Lý</p>
+<input type="number" id="diemLy"><br>
+<p>Điểm Hóa</p>
+<input type="number" id="diemHoa"><br>
+<p>Điểm Sinh</p>
+<input type="number" id="diemSinh"><br>
+<button onclick="diemTrungBinh()">Tính điểm</button>
+<h2 id="KetQua"></h2>
+
+<script>
+    function diemTrungBinh() {
+        let ly = parseFloat(document.getElementById("diemLy").value);
+        let hoa = parseFloat(document.getElementById("diemHoa").value);
+        let sinh = parseFloat(document.getElementById("diemSinh").value);
+        let tb = (ly + hoa + sinh) / 3;
+        document.getElementById("KetQua").innerText = "ĐIỂM TRUNG BÌNH 3 MÔN: " + tb;
+    }
+</script>
+</body>
+</html>
