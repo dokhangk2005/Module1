@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<script>
+    let i = 0;
+    let number = 0;
+    let sum = 0;
+
+    while (i < 30) {
+        //debugger;
+        if (number % 7 === 0) {
+            sum += number;
+            i++;
+        }
+        number++;
+    }
+    console.log(i);
+    console.log(sum);
+    console.log(number);
+    alert("Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên (có tiính số 0) là: " + sum);
+</script>
+</body>
+</html>

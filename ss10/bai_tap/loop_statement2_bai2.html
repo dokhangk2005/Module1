@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let number = null;
+    do {
+        number = +prompt("Nhập 1 số nguyên dương")
+    } while (isNaN(number) || number < 0)
+    let giaiThua = 1;
+    for (let i = number; i > 0; i--) {
+        giaiThua *= i;
+    }
+    alert(number + "! = " + giaiThua);
+</script>
+</body>
+</html>

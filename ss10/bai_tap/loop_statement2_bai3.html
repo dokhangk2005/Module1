@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let triangle1 = "";
+    for (let i = 1; i < 6; i++) {
+        for (let j = 1; j <= i; j++) {
+            triangle1 += "*";
+        }
+        triangle1 += "<br>";
+    }
+    document.write(triangle1 + "<br><br>");
+
+    triangle1 = "";
+    for (let i = 5; i > 0; i--) {
+        for (let j = 1; j <= i; j++) {
+            triangle1 += "*";
+        }
+        triangle1 += "<br>";
+    }
+    document.write(triangle1 + "<br><br>");
+
+    triangle1 = "";
+    for (let i = 5; i > 0; i--) {
+        for (let j = 1; j <= 5; j++) {
+            if (j >= i) {
+                triangle1 += "*";
+            } else {
+                triangle1 += "&nbsp;&nbsp;";
+            }
+        }
+        triangle1 += "<br>";
+    }
+    document.write(triangle1 + "<br><br>");
+
+    triangle1 = "";
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            if (j >= i) {
+                console.log("1");
+                triangle1 += "*";
+            } else {
+                triangle1 += "&nbsp;&nbsp;";
+            }
+        }
+        triangle1 += "<br>";
+    }
+    document.write(triangle1 + "<br><br>");
+</script>
+</body>
+</html>

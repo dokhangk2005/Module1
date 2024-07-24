@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bang cuu chuong</title>
+</head>
+<body>
+<script>
+    let bangCuuChuong = "<table cellpadding='10' style='border: 2px solid black;'>";
+    let result = 1;
+    for (let i = 1; i <= 9 ; i++) {
+        bangCuuChuong+="<tr style='border: 1px solid black;'>";
+        for (let j = 2; j <= 9 ; j++) {
+            result = j*i;
+            bangCuuChuong+="<td style='border: 1px solid black;'>"+j+"x"+i+"="+result+"</td>";
+        }
+        bangCuuChuong+="</tr>";
+    }
+    bangCuuChuong+="</table>";
+    document.write(bangCuuChuong);
+</script>
+</body>
+</html>

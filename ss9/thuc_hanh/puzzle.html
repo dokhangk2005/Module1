@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<img id="pic1" src="img-1.png" onclick="format1()" style="height : 200px; witdh: 1000px;"/> <br>
+<img id="pic2" src="img-4.png" onclick="format2()" style="height : 200px; witdh: 2000px;"/> <br>
+<img id="pic3" src="img-7.png" onclick="format3()" style="height : 200px; witdh: 2000px;"/> <br>
+<script>
+    let objPic1 = document.getElementById("pic1");
+    let objPic2 = document.getElementById("pic2"); // Đã đổi từ objhinh2 thành objPic2
+    let objPic3 = document.getElementById("pic3"); // Đã đổi từ objhinh3 thành objPic3
+
+    function format1() {
+        let src1 = objPic1.getAttribute('src');
+        if (src1 === 'img-1.png') { // Sửa lại so sánh với tên file đúng
+            objPic1.src = 'img-4.png';
+        } else if (src1 === 'img-4.png') { // Sửa lại so sánh với tên file đúng
+            objPic1.src = 'img-7.png';
+        } else {
+            objPic1.src = 'img-1.png';
+        }
+    }
+
+    function format2() {
+        let src2 = objPic2.getAttribute('src');
+        if (src2 === 'img-2.png') {
+            objPic2.src = 'img-5.png';
+        } else if (src2 === 'img-5.png') {
+            objPic2.src = 'img-8.png'
+        } else {
+            objPic2.src = 'img-2.png';
+        }
+    }function format3() {
+        let src3 = objPic3.getAttribute('src');
+        if (src3 === 'img-3.png') {
+            objPic3.src = 'img-6.png';
+        } else if (src3 === 'img-6.png') {
+            objPic3.src = 'img-9.png'
+        } else {
+            objPic3.src = 'img-3.png';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<script>
+    function playGame() {
+        let min, max = null;
+        do {
+            min = +prompt("Nhập số nhỏ nhất trong khoảng muốn đoán:");
+            max = +prompt("Nhập số lớn nhất trong khoảng muốn đoán:");
+        } while (min > max || min === max)
+        let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min; //random từ min -> max
+        console.log(randomNumber);
+        for (let i = 0; i < 3; i++) {
+            let userNumber = +prompt("Hãy đoán 1 số:");
+            if (userNumber === randomNumber) {
+                alert("Chúc mừng đã đoán đúng");
+                break;
+            } else if (userNumber < randomNumber) {
+                alert("Số bạn đoán bé hơn");
+            } else {
+                alert("Số bạn đoán lớn hơn");
+            }
+        }
+    }
+</script>
+</body>
+</html>
