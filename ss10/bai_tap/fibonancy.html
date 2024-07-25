@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1, num2, i, temp;
+    num1 = num2 = 1;
+    let soLuong = parseInt(prompt('Nhap so luong so Fibanacci: '));
+    for (i = 0; i < soLuong; i++) {
+        document.write(num1 + "<br>")
+        temp = num1 + num2;
+        num1 = num2;
+        num2 = temp
+
+    }
+</script>
+</body>
+</html>
