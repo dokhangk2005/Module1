@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr3 = [0];
+    let max = arr3[0];
+    let average = 0;
+    let arrLength = +prompt("Nhập chiều dài mảng: ")
+    for (let i = 0; i < arrLength; i++) {
+        arr3[i] = Math.floor(Math.random() * 21);  //tạo số nguyên từ 0 đến 20
+        average += arr3[i];
+        if (arr3[i] > max) {
+            max = arr3[i];
+        }
+    }
+    alert("Mảng: " + arr3.toString() + "\nSố lớn nhất trong mảng: " + max + "\nGiá trị trung bình: " + average / arr3.length);
+</script>
+</body>
+</html>

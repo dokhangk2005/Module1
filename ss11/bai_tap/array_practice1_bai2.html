@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = Math.floor(Math.random() * 1001);  //tạo số nguyên từ 0 đến 1000
+    }
+    console.log(arr.toString());
+    let max = arr[0];
+    let position = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            position = i;
+        }
+    }
+    alert("Số lớn nhất trong mảng: " + max + " nằm vị trí: " + (position + 1));
+</script>
+</body>
+</html>

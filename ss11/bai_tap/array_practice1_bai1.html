@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script>
+    let arr1 = [];
+    let count = 0;
+    for (let i = 0; i < 10; i++) {
+        arr1[i] = Math.floor(Math.random() * 21);  //tạo số nguyên từ 0 đến 20
+        if (arr1[i] >= 10) {
+            count++;
+        }
+    }
+    alert(arr1.toString() + "\nCó " + count + " số nguyên lớn hơn hoặc bằng 10");
+</script>
+</body>
+</html>
