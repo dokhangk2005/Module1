@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrString = [];
+    let length = +prompt("Nhập độ dài mảng: ");
+    for (let i = 0; i < length; i++) {
+        arrString[i] = prompt("Nhập giá trị tại vị trí thứ " + i);
+    }
+    let count = 0;
+    for (let i of arrString) {
+        if (!isNaN(i)) {
+            count++;
+        }
+    }
+    document.write("Tổng số ký tự số là " + count);
+</script>
+</body>
+</html>

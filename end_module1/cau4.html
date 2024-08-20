@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Câu 4</title>
+</head>
+<body>
+<script>
+  class KhachHang {
+    constructor(maKH, tenKH, sdt, diaChi, email) {
+      this.maKH = maKH;
+      this.tenKH = tenKH;
+      this.sdt = sdt;
+      this.diaChi = diaChi;
+      this.email = email;
+    }
+  }
+
+  let danhSachKhachHang = [];
+
+  function themKhachHang() {
+    let maKH = prompt("Nhập mã khách hàng:");
+    let tenKH = prompt("Nhập tên khách hàng:");
+    let sdt = prompt("Nhập số điện thoại:");
+    let diaChi = prompt("Nhập địa chỉ:");
+    let email = prompt("Nhập email:");
+
+    let khachHangMoi = new KhachHang(maKH, tenKH, sdt, diaChi, email);
+    danhSachKhachHang.push(khachHangMoi);
+    alert("Đã thêm khách hàng thành công!");
+  }
+
+  function hienThiDanhSach() {
+    if (danhSachKhachHang.length === 0) {
+      document.write("Danh sách khách hàng đang trống.<br>");
+      return;
+    }
+    document.write("Danh sách khách hàng:<br>");
+    for (let i = 0; i < danhSachKhachHang.length; i++) {
+      let kh = danhSachKhachHang[i];
+      document.write("Mã KH: " + kh.maKH + "<br>");
+      document.write("Tên KH: " + kh.tenKH + "<br>");
+      document.write("SĐT: " + kh.sdt + "<br>");
+      document.write("Địa chỉ: " + kh.diaChi + "<br>");
+      document.write("Email: " + kh.email + "<br>");
+      document.write("-------------------<br>");
+    }
+  }
+
+  let chonChucNang;
+  do {
+    chonChucNang = prompt("Chọn chức năng:\n1. Thêm khách hàng\n2. Hiển thị danh sách\n0. Thoát");
+    switch (chonChucNang) {
+      case "1":
+        themKhachHang();
+        break;
+      case "2":
+        hienThiDanhSach();
+        break;
+      case "0":
+        break;
+      default:
+        alert("Lựa chọn không hợp lệ!");
+    }
+  } while (chonChucNang !== "0");
+</script>
+</body>
+</html>

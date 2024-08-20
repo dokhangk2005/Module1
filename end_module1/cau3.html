@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    function demCapSoChiaHetChoK(arr, k) {
+        let count = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if ((arr[i] + arr[j]) % k === 0) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    let arr = [];
+    let n = parseInt(prompt("Nhập số lượng phần tử (tối đa 50):"));
+
+    while (n <= 0 || n > 50) {
+        console.log("Số lượng phần tử không hợp lệ. Vui lòng nhập lại.");
+        n = parseInt(prompt("Nhập lại số lượng phần tử:"));
+    }
+
+    for (let i = 0; i < n; i++) {
+        let element = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + ":"));
+        arr.push(element);
+    }
+    let k = prompt("Nhập số nguyên dương K: ")
+    while (n <= 0) {
+        console.log("Vui lòng nhập lại K");
+        k = parseInt(prompt("Nhập lại số nguyên dương K > 0 :"));
+    }
+    let result = demCapSoChiaHetChoK(arr, k);
+    console.log("Số cặp số có tổng chia hết cho", k, "là:", result);
+</script>
+</body>
+</html>

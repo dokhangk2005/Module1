@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr7 = [1, 2, 2, 2, 3, 4];
+    console.log(arr7.toString());
+    let numberV = +prompt("Nhập 1 số nguyên: ");
+    let check = false;
+    for (let i = 0; i < arr7.length; i++) {
+        if (numberV === arr7[i]) {
+            //alert("V is in the array");
+            check = true;
+            for (let j = i; j < arr7.length; j++) {
+                if (j === arr7.length - 1) {
+                    arr7[j] = 0;
+                } else {
+                    arr7[j] = arr7[j + 1];
+                }
+            }
+            i--;
+            console.log(arr7.toString());
+        }
+    }
+    if (check) {
+        alert("Số đã nhập thuộc mảng và mảng mới là: " + arr7.toString());
+    } else {
+        alert("Số đã nhập không thuộc mảng và mảng là: " + arr7.toString());
+    }
+</script>
+</body>
+</html>

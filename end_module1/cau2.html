@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    function lamTronDiem(diem) {
+        let boiSoTiepTheo = Math.ceil(diem / 5) * 5;
+
+        if (boiSoTiepTheo - diem < 3 && diem >= 48) {
+            return boiSoTiepTheo;
+        } else {
+            return diem;
+        }
+    }
+
+    let n = prompt("Nhập điểm số của học sinh: ");
+    console.log("Đểm sau khi đã được làm tròn: " + lamTronDiem(n));
+</script>
+</body>
+</html>

@@ -6,58 +6,32 @@
 </head>
 <body>
 <script>
-    class ElectricLamp {
-        constructor(status) {
-            this.status = status;
+     function  function1(n)
+    {
+        var flag = true;
+        if (n < 2){
+            flag = false;
         }
-
-        setStatus(value) {
-            this.status = value;
+        else if (n == 2){
+            flag = true;
         }
-
-        getStatus() {
-            return this.status;
+        else if (n % 2 == 0){
+            flag = false;
         }
-    }
-
-    class SwitchButton {
-        constructor(status, lamp) {
-            this.status = status;
-            this.lamp = lamp;
-        }
-
-        setLamp(lamp) {
-            this.lamp = lamp;
-        }
-
-        getLamp() {
-            return this.lamp;
-        }
-
-        switchONLamp() {
-            return true
-        }
-
-        switchOffLamp() {
-            return false
-        }
-
-        connectToLamp(ElectricLamp) {
-            if (ElectricLamp.getStatus()) {
-                document.write(`Electric Lamp on <br>`);
-                ElectricLamp.setStatus(this.switchOffLamp());
-            } else {
-                document.write(`Electric Lamp off <br>`);
-                ElectricLamp.setStatus(this.switchONLamp());
+        else{
+            for (var i = 3; i < n-1; i+=2)
+            {
+                if (n % i == 0){
+                    flag = false;
+                    break;
+                }
             }
         }
+        return flag;
     }
-    let electricLamp=new ElectricLamp();
-    let button =new SwitchButton();
-    electricLamp.setStatus(true);
-    button.connectToLamp(electricLamp);
-    button.connectToLamp(electricLamp);
-    button.connectToLamp(electricLamp);
+    function 1(13) ;
+
+
 </script>
 </body>
 </html>

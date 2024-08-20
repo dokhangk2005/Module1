@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr6 = [];
+  for (let i = 0; i < 10; i++) {
+    arr6[i] = Math.floor(Math.random() * 11);  //tạo số nguyên từ 0 đến 10
+  }
+  console.log(arr6.toString());
+  let numberV = +prompt("Nhập 1 số nguyên: ");
+  let check = false;
+  for (let i = 0; i < 10; i++) {
+    if (numberV === arr6[i]) {
+      alert("V is in the array");
+      check = true;
+      break;
+    }
+  }
+  if (!check) {
+    alert("V is not in the array");
+  }
+</script>
+</body>
+</html>

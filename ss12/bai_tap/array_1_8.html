@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr8 = [];
+    for (let i = 0; i < 10; i++) {
+        arr8[i] = Math.floor(Math.random() * 101);  //tạo số nguyên từ 0 đến 100
+    }
+    console.log(arr8.toString());
+    let temp = null;
+    for (let i = 1; i < arr8.length; i++) {
+        if (arr8[i] > arr8[i - 1]) {
+            for (let j = 0; j <= i; j++) {
+                if (arr8[j] < arr8[i]) {
+                    temp = arr8[i];
+                    arr8[i] = arr8[j];
+                    arr8[j] = temp;
+                }
+            }
+        }
+    }
+    alert("Mảng sau khi sắp xếp: " + arr8.toString());
+
+</script>
+</body>
+</html>

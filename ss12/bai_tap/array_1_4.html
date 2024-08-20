@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr4 = [];
+    let arrLength = +prompt("Nhập chiều dài mảng: ");
+    for (let i = 0; i < arrLength; i++) {
+        arr4[i] = Math.floor(Math.random() * 101);  //tạo số nguyên từ 0 đến 1000
+    }
+    console.log(arr4.toString());
+    let reversedArr = [];
+    for (let i = 0; i < arrLength; i++) {
+        reversedArr[i] = arr4[arrLength - 1 - i];
+    }
+    console.log("Mảng đã đảo ngược: " + reversedArr.toString());
+    alert("Mảng đã đảo ngược: " + reversedArr.toString());
+</script>
+</body>
+</html>
