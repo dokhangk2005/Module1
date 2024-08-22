@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isNumber(data) {
+        if (isNaN(data)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    let number = prompt("Nhập 1 ký tự: ")
+
+    if (isNumber(number)) {
+        alert("Ký tự vừa nhập là 1 con số");
+    } else {
+        alert("Ký tự vừa nhập không phải là số");
+    }
+</script>
+</body>
+</html>

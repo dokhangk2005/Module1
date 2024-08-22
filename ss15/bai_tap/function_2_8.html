@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverseArray(array) {
+        let tempArr = [];
+        for (let i = array.length - 1; i >= 0; i--) {
+            tempArr.push(array[i]);
+        }
+        return tempArr;
+    }
+
+    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    numbers = reverseArray(numbers);
+    document.write(numbers);
+</script>
+</body>
+</html>

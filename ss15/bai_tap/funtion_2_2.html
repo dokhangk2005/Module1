@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function calculateCircumference(radius) {
+        return (2 * Math.PI * radius).toFixed(3);
+    }
+
+    function calculateArea(radius) {
+        return (Math.PI * radius * radius).toFixed(3);
+    }
+
+    let radius = +prompt("Nhập bán kính: ");
+    let circumference = calculateCircumference(radius);
+    let area = calculateArea(radius);
+    document.write("Circumference = " + circumference + "<br>Area = " + area);
+</script>
+</body>
+</html>
